@@ -7,9 +7,9 @@ export const App = () => {
   const [clicksCount, setClicksCount] = useState(0)
 
   useEffect(() => {
-    const timer = setTimeout(() => setSecondsOpen(secondsOpen + 1), 1000)
+    const timer = setInterval(() => setSecondsOpen((prevSecondsOpen) => prevSecondsOpen + 1), 1000)
     return () => clearTimeout(timer)
-  }, [secondsOpen, setSecondsOpen])
+  }, [])
 
   return (
     <div className="App">
