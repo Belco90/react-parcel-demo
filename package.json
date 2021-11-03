@@ -1,0 +1,27 @@
+{
+  "name": "react-parcel-demo",
+  "version": "1.0.0",
+  "description": "Webapp demo built with React + Parcel ",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Belco90/react-parcel-demo.git"
+  },
+  "keywords": [
+    "react",
+    "parcel"
+  ],
+  "author": {
+    "name": "Mario Beltrán Alarcón",
+    "email": "belco90@gmail.com",
+    "url": "https://mario.dev/"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Belco90/react-parcel-demo/issues"
+  },
+  "homepage": "https://github.com/Belco90/react-parcel-demo#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
