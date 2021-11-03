@@ -2,7 +2,7 @@
   "name": "react-parcel-demo",
   "version": "1.0.0",
   "description": "Webapp demo built with React + Parcel ",
-  "main": "index.js",
+  "source": "src/index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Belco90/react-parcel-demo.git"
@@ -22,6 +22,15 @@
   },
   "homepage": "https://github.com/Belco90/react-parcel-demo#readme",
   "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0"
   }
 }
