@@ -7,7 +7,10 @@ export const App = () => {
   const [clicksCount, setClicksCount] = useState(0)
 
   useEffect(() => {
-    const timer = setInterval(() => setSecondsOpen((prevSecondsOpen) => prevSecondsOpen + 1), 1000)
+    const timer = setInterval(
+      () => setSecondsOpen((prevSecondsOpen) => prevSecondsOpen + 1),
+      1000
+    )
     return () => clearTimeout(timer)
   }, [])
 
@@ -53,4 +56,4 @@ export const App = () => {
       </header>
     </div>
   )
-};
+}

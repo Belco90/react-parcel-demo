@@ -4,10 +4,10 @@ const jestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   clearMocks: true,
   transform: {
-    '.+\\.(css|svg|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
+    '.+\\.(css|svg|less|sass|scss|png|jpg|ttf|woff|woff2)$':
+      'jest-transform-stub',
     '^.+\\.jsx?$': 'babel-jest',
   },
-};
+}
 
-
-export default jestConfig;
+export default jestConfig

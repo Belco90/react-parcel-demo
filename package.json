@@ -24,7 +24,8 @@
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier . --write --ignore-unknown"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -41,6 +42,7 @@
     "babel-jest": "^27.3.1",
     "jest": "^27.3.1",
     "jest-transform-stub": "^2.0.0",
-    "parcel": "^2.0.0"
+    "parcel": "^2.0.0",
+    "prettier": "2.4.1"
   }
 }
