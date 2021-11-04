@@ -25,6 +25,7 @@
     "start": "parcel",
     "build": "parcel build",
     "test": "jest",
+    "lint": "eslint . --ext .js,.jsx --ignore-path .gitignore",
     "format": "prettier . --write --ignore-unknown"
   },
   "dependencies": {
@@ -40,6 +41,13 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "babel-jest": "^27.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-testing-library": "^5.0.0",
     "jest": "^27.3.1",
     "jest-transform-stub": "^2.0.0",
     "parcel": "^2.0.0",
