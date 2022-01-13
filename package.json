@@ -20,6 +20,9 @@
     "url": "https://github.com/Belco90/react-parcel-demo/issues"
   },
   "homepage": "https://github.com/Belco90/react-parcel-demo#readme",
+  "engines": {
+    "npm": ">=8.3.0"
+  },
   "scripts": {
     "start": "parcel",
     "build": "parcel build",
