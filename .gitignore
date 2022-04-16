@@ -3,3 +3,7 @@ dist
 node_modules
 coverage
 .DS_Store
+
+# lock files
+package-lock.json
+yarn.lock
