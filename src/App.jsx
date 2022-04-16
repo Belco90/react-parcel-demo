@@ -9,7 +9,7 @@ export const App = () => {
   useEffect(() => {
     const timer = setInterval(
       () => setSecondsOpen((prevSecondsOpen) => prevSecondsOpen + 1),
-      1000
+      1000,
     )
     return () => clearTimeout(timer)
   }, [])
