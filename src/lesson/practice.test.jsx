@@ -3,10 +3,12 @@
  */
 
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { cleanup, render, screen } from '@testing-library/react'
 import { App } from '../App'
 
-it('should render a basic demo', () => {
+afterEach(cleanup)
+
+it('should render count', () => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+  expect(screen.getByText('Count is: 0')).toBeInTheDocument()
 })
