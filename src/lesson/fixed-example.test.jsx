@@ -4,5 +4,6 @@ import { App } from '../App'
 
 it('should render a basic demo', () => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+  const mainText = screen.getByText('Hello Parcel + React!')
+  expect(mainText).toBeInTheDocument()
 })

@@ -2,7 +2,8 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { App } from '../App'
 
-it('should render a basic demo', () => {
+it('should render a basic demo', async () => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+  const mainText = await screen.getByText('Hello Parcel + React!')
+  expect(mainText).toBeInTheDocument()
 })
