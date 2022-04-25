@@ -3,10 +3,15 @@
  */
 
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { App } from '../App'
 
 it('should render a basic demo', () => {
-  render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+  const { container } = render(<App />)
+  expect(container.querySelector('img')).toBeInTheDocument()
+  expect(container.querySelectorAll('.App-link')[1]).toHaveTextContent(
+    'Parcel Docs',
+  )
+  expect(container.querySelector('.App-header')).toBeInTheDocument()
+  expect(container.querySelector('button')).toBeInTheDocument()
 })
