@@ -8,5 +8,9 @@ import { App } from '../App'
 
 it('should render a basic demo', () => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+  const banner = screen.getByRole('banner')
+  expect(banner.lastChild.children).toHaveLength(2)
+  expect(
+    banner.querySelector('.App-link').nextElementSibling,
+  ).toHaveTextContent('Parcel Docs')
 })

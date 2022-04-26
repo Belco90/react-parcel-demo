@@ -4,5 +4,8 @@ import { App } from '../App'
 
 it('should render a basic demo', () => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+  const banner = screen.getByRole('banner')
+  const heading = screen.getByRole('heading', { name: 'Hello Parcel + React!' })
+  expect(banner.firstChild).toHaveAttribute('alt', 'React logo')
+  expect(heading.closest('header')).toHaveClass('App-header')
 })
