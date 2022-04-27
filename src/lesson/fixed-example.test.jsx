@@ -1,8 +1,24 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import { App } from '../App'
+import userEvent from '@testing-library/user-event'
 
-it('should render a basic demo', () => {
+const fetchMock = jest.fn().mockResolvedValue({ ok: true })
+
+beforeEach(() => {
+  global.fetch = fetchMock
+})
+
+it('should trigger trace requests on count clicks', async () => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+
+  const button = screen.getByRole('button')
+  userEvent.click(button)
+
+  await waitFor(() => {
+    expect(fetchMock).toHaveBeenCalledWith('/api/fake-trace-resource', {
+      method: 'POST',
+    })
+  })
+  expect(fetchMock).toHaveBeenCalledTimes(1)
 })

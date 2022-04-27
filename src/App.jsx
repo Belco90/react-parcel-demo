@@ -24,6 +24,11 @@ export const App = () => {
     }
   }
 
+  const handleCountClick = () => {
+    setClicksCount((count) => count + 1)
+    fetch('/api/fake-trace-resource', { method: 'POST' })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -36,10 +41,7 @@ export const App = () => {
           Page has been open for <code>{secondsOpen}</code> seconds.
         </p>
         <p>
-          <button
-            type="button"
-            onClick={() => setClicksCount((count) => count + 1)}
-          >
+          <button type="button" onClick={handleCountClick}>
             Count is: {clicksCount}
           </button>
         </p>
