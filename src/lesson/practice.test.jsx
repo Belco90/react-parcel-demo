@@ -5,8 +5,20 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { App } from '../App'
+import userEvent from '@testing-library/user-event'
 
-it('should render a basic demo', () => {
+let button = undefined
+
+beforeEach(() => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+  button = screen.getByRole('button')
+})
+
+it('should start the count in 0', () => {
+  expect(screen.getByText('Count is: 0')).toBeInTheDocument()
+})
+
+it('should increase the count', () => {
+  userEvent.click(button)
+  expect(screen.getByText('Count is: 1')).toBeInTheDocument()
 })
