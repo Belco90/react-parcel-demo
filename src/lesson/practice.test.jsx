@@ -18,5 +18,7 @@ it('should render a basic demo', async () => {
     timeout: 100,
   })
   userEvent.click(button)
-  expect(button).toHaveTextContent('Count is: 1')
+  await waitFor(() =>
+    expect(screen.getByRole('button')).toHaveTextContent('Count is: 1'),
+  )
 })
