@@ -4,5 +4,10 @@ import { App } from '../App'
 
 it('should render a basic demo', () => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+
+  screen.getByAltText('React logo')
+  screen.getByText('Hello Parcel + React!')
+  screen.getByRole('button', { name: 'Count is: 0' })
+  screen.getByText('Hello Parcel + React!')
+  screen.getByText('Parcel Docs')
 })
