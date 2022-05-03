@@ -14,6 +14,16 @@ export const App = () => {
     return () => clearTimeout(timer)
   }, [])
 
+  const handleCountReset = (event) => {
+    if (
+      event.code === 'Enter' &&
+      event.target.value.toLowerCase() === 'reset'
+    ) {
+      setClicksCount(0)
+      setSecondsOpen(0)
+    }
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -32,6 +42,18 @@ export const App = () => {
           >
             Count is: {clicksCount}
           </button>
+        </p>
+
+        <p>
+          <label>
+            Write &quot;reset&quot; and hit enter to reset all the counts:
+            <br />
+            <input
+              type="text"
+              placeholder='Type "reset" here'
+              onKeyDown={handleCountReset}
+            />
+          </label>
         </p>
 
         <p>
