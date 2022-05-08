@@ -16,7 +16,10 @@ module.exports = {
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
-      rules: {},
+      rules: {
+        'testing-library/prefer-wait-for': 'error',
+        'testing-library/prefer-find-by': 'off' // so we can focus on `prefer-wait-for`
+      },
     },
   ],
   parserOptions: {
