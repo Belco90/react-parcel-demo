@@ -18,7 +18,11 @@ module.exports = {
       extends: ['plugin:testing-library/react'],
       rules: {
         'testing-library/prefer-wait-for': 'error',
-        'testing-library/prefer-find-by': 'off' // so we can focus on `prefer-wait-for`
+
+        // disabling the following rules, so we can focus on `prefer-wait-for`
+        'testing-library/prefer-find-by': 'off',
+        'testing-library/no-container': 'off',
+        'testing-library/no-node-access': 'off',
       },
     },
   ],

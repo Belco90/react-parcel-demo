@@ -8,8 +8,11 @@ import userEvent from '@testing-library/user-event'
 import { App } from '../App'
 
 it('should render a basic demo', async () => {
-  render(<App />)
+  const { container } = render(<App />)
 
+  expect(
+    await waitForElement(() => container.querySelector('.App-logo')),
+  ).toBeInTheDocument()
   const button = await waitForElement(() => screen.getByText('Count is: 0'))
 
   userEvent.click(button)
