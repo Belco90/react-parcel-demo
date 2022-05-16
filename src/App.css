@@ -37,6 +37,6 @@
   }
 }
 
-button {
+input, button {
   font-size: calc(10px + 2vmin);
 }

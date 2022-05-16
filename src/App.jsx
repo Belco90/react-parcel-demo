@@ -1,80 +1,70 @@
-import React, { useState, useEffect } from 'react'
-import logo from './logo.svg'
+import React, { useState } from 'react'
 import './App.css'
 
+/**
+ * https://pokeapi.co/docs/v2#pokemon
+ * @param {number} id
+ */
+const retrievePokemon = async (id) => {
+  const resp = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
+
+  if (resp.ok) {
+    const data = await resp.json()
+    return data
+  }
+
+  return null
+}
+
 export const App = () => {
-  const [secondsOpen, setSecondsOpen] = useState(0)
-  const [clicksCount, setClicksCount] = useState(0)
+  const [pokemon, setPokemon] = useState(undefined)
 
-  useEffect(() => {
-    const timer = setInterval(
-      () => setSecondsOpen((prevSecondsOpen) => prevSecondsOpen + 1),
-      1000,
-    )
-    return () => clearTimeout(timer)
-  }, [])
-
-  const handleCountReset = (event) => {
-    if (
-      event.code === 'Enter' &&
-      event.target.value.toLowerCase() === 'reset'
-    ) {
-      setClicksCount(0)
-      setSecondsOpen(0)
-    }
+  const handlePokemonSearch = async (event) => {
+    event.preventDefault()
+    const form = event.target
+    const formData = new FormData(form)
+    const data = await retrievePokemon(formData.get('pokemonId'))
+    setPokemon(data)
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="React logo" />
-        <h1>Hello Parcel + React!</h1>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          Page has been open for <code>{secondsOpen}</code> seconds.
-        </p>
-        <p>
-          <button
-            type="button"
-            onClick={() => setClicksCount((count) => count + 1)}
-          >
-            Count is: {clicksCount}
-          </button>
-        </p>
-
-        <p>
+        <form onSubmit={handlePokemonSearch}>
           <label>
-            Write &quot;reset&quot; and hit enter to reset all the counts:
-            <br />
-            <input
-              type="text"
-              placeholder='Type "reset" here'
-              onKeyDown={handleCountReset}
-            />
+            Pick one Pokémon by their ID
+            <div>
+              <input
+                type="number"
+                name="pokemonId"
+                min={1}
+                max={898}
+                required
+              />
+            </div>
+            <button type="submit">Search</button>
           </label>
-        </p>
+        </form>
 
-        <p>
-          <a
-            className="App-link"
-            href="https://beta.reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://parceljs.org/docs/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Parcel Docs
-          </a>
-        </p>
+        {pokemon === null && <div>Something went wrong</div>}
+        {!!pokemon && (
+          <div>
+            <img
+              src={pokemon.sprites.front_default}
+              alt={`Sprite of ${pokemon.name}`}
+            />
+
+            <ul>
+              <li>
+                <strong>Name:</strong> {pokemon.name}
+              </li>
+              <li>
+                <strong>Types:</strong>{' '}
+                {pokemon.types.map(({ type }) => type.name).join(', ')}
+              </li>
+            </ul>
+          </div>
+        )}
       </header>
     </div>
   )
