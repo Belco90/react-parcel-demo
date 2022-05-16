@@ -5,6 +5,7 @@ import './App.css'
 export const App = () => {
   const [secondsOpen, setSecondsOpen] = useState(0)
   const [clicksCount, setClicksCount] = useState(0)
+  const [isMouseHover, setIsMouseHover] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(
@@ -52,8 +53,21 @@ export const App = () => {
               type="text"
               placeholder='Type "reset" here'
               onKeyDown={handleCountReset}
+              onMouseOver={() => {
+                setIsMouseHover(true)
+              }}
+              onMouseOut={() => {
+                setIsMouseHover(false)
+              }}
+              onFocus={() => {
+                setIsMouseHover(true)
+              }}
+              onBlur={() => {
+                setIsMouseHover(false)
+              }}
             />
           </label>
+          {isMouseHover && <div>Mouse hover!</div>}
         </p>
 
         <p>

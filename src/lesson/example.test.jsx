@@ -1,5 +1,7 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/dom'
+import { render } from '@testing-library/react'
+
 import { App } from '../App'
 
 it('should render a basic demo', () => {
