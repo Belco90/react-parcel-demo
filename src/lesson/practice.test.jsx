@@ -12,6 +12,10 @@ const fetchMock = jest
   .fn()
   .mockResolvedValue({ ok: true, json: jest.fn().mockResolvedValue(bulbasaur) })
 
+function findPokemonByName(pokemonName) {
+  return screen.findByText(pokemonName)
+}
+
 beforeEach(() => {
   global.fetch = fetchMock
 })
@@ -22,5 +26,5 @@ it('should render the Pokémon name', () => {
   userEvent.type(screen.getByLabelText('Pick one Pokémon by their ID'), '1')
   userEvent.click(screen.getByRole('button', { name: 'Search' }))
 
-  expect(screen.findByText('charmander')).toBeTruthy()
+  expect(findPokemonByName('charmander')).toBeTruthy()
 })
