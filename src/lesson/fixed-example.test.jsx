@@ -1,8 +1,19 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { App } from '../App'
 
-it('should render a basic demo', () => {
+const fetchMock = jest.fn().mockResolvedValue({ ok: true })
+
+beforeEach(() => {
+  global.fetch = fetchMock
+})
+
+it('should track one count', async () => {
   render(<App />)
-  expect(screen.getByText('Hello Parcel + React!')).toBeInTheDocument()
+
+  const countButton = screen.getByRole('button', { name: 'Count is: 0' })
+  userEvent.click(countButton)
+
+  await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1))
 })
