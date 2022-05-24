@@ -8,5 +8,9 @@ import { App } from '../App'
 
 it('should render links to docs', () => {
   render(<App />)
-  expect(screen.getAllByText(/(learn react|parcel docs)/gi)).toHaveLength(2)
+  expect(
+    screen.getAllByRole('link', {
+      name: /(learn react|parcel docs)/gi,
+    }),
+  ).toHaveLength(2)
 })
