@@ -16,7 +16,11 @@ module.exports = {
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
-      rules: {},
+      rules: {
+        // disabling these rules so we can focus on no-promise-in-fire-event
+        'testing-library/await-async-query': 'off',
+        'testing-library/await-async-utils': 'off',
+      },
     },
   ],
   parserOptions: {
