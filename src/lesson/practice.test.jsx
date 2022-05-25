@@ -13,9 +13,12 @@ it('should handle the count reset', () => {
   fireEvent.click(button)
   expect(screen.getByText('Count is: 1')).toBeInTheDocument()
 
-  fireEvent.keyDown(screen.findByLabelText(/reset all the count/), {
-    code: 'Enter',
-    target: { value: 'reset' },
-  })
+  fireEvent.keyDown(
+    Promise((resolve) => resolve(screen.getByLabelText(/reset all the count/))),
+    {
+      code: 'Enter',
+      target: { value: 'reset' },
+    },
+  )
   expect(screen.getByText('Count is: 0')).toBeInTheDocument()
 })
