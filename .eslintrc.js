@@ -31,5 +31,7 @@ module.exports = {
       version: 'detect',
     },
   },
-  rules: {},
+  rules: {
+    'react/prop-types': 'off',
+  },
 }
