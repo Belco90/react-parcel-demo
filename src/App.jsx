@@ -24,7 +24,7 @@ export const App = ({ shouldAwaitAdditionalPromise = false }) => {
     const form = event.target
     const formData = new FormData(form)
 
-    // this is an extra promise to break the waitFor with an empty callback behavior
+    // this is an optionally awaited promise to require an extra tick of the event loop
     if (shouldAwaitAdditionalPromise) {
       await new Promise((resolve) => setTimeout(resolve, 0))
     }
