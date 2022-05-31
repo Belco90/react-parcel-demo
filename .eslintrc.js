@@ -16,7 +16,11 @@ module.exports = {
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
-      rules: {},
+      rules: {
+        // disable these rules to focus on `no-wait-for-snapshot`
+        'testing-library/no-node-access': 'off',
+        'testing-library/no-wait-for-multiple-assertions': 'off',
+      },
     },
   ],
   parserOptions: {
@@ -31,5 +35,5 @@ module.exports = {
       version: 'detect',
     },
   },
-  rules: {},
+  rules: { 'react/prop-types': 'off' },
 }
