@@ -1,0 +1,593 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should make a request to pokeapi 1`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 2`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 3`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 4`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 5`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 6`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 7`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 8`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 9`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 10`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 11`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 12`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 13`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 14`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 15`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 16`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 17`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 18`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
+
+exports[`should make a request to pokeapi 19`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+    <div>
+      <img
+        alt="Sprite of bulbasaur"
+        src="https://pokemon.png"
+      />
+      <ul>
+        <li>
+          <strong>
+            Name:
+          </strong>
+           
+          bulbasaur
+        </li>
+        <li>
+          <strong>
+            Types:
+          </strong>
+           
+          grass, poison
+        </li>
+      </ul>
+    </div>
+  </header>
+</div>
+`;

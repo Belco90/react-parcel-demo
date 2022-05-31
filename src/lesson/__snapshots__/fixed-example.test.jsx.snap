@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the basic Pokémon info 1`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+    <div>
+      <img
+        alt="Sprite of bulbasaur"
+        src="https://pokemon.png"
+      />
+      <ul>
+        <li>
+          <strong>
+            Name:
+          </strong>
+           
+          bulbasaur
+        </li>
+        <li>
+          <strong>
+            Types:
+          </strong>
+           
+          grass, poison
+        </li>
+      </ul>
+    </div>
+  </header>
+</div>
+`;

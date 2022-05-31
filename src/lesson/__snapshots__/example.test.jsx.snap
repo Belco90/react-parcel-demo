@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the basic Pokémon info 1`] = `
+<div
+  class="App"
+>
+  <header
+    class="App-header"
+  >
+    <form>
+      <label>
+        Pick one Pokémon by their ID
+        <div>
+          <input
+            max="898"
+            min="1"
+            name="pokemonId"
+            required=""
+            type="number"
+          />
+        </div>
+        <button
+          type="submit"
+        >
+          Search
+        </button>
+      </label>
+    </form>
+  </header>
+</div>
+`;
