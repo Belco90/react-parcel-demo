@@ -1,81 +1,51 @@
-import React, { useState, useEffect } from 'react'
-import logo from './logo.svg'
+import React, { useState } from 'react'
 import './App.css'
+import CountDemo from './demos/CountDemo'
+import PokemonDemo from './demos/PokemonDemo'
+import WeatherDemo from './demos/WeatherDemo'
+
+const COUNT_DEMO = 'count'
+const POKEMON_DEMO = 'pokemon'
+const WEATHER_DEMO = 'weather'
+
+const IncorrectDemo = () => <div>IncorrectDemo</div>
+
+const DEMO_COMPONENTS_MAP = {
+  [COUNT_DEMO]: CountDemo,
+  [POKEMON_DEMO]: PokemonDemo,
+  [WEATHER_DEMO]: WeatherDemo,
+}
+
+const getDemoComponent = (demoValue) => {
+  return DEMO_COMPONENTS_MAP[demoValue] ?? IncorrectDemo
+}
 
 export const App = () => {
-  const [secondsOpen, setSecondsOpen] = useState(0)
-  const [clicksCount, setClicksCount] = useState(0)
+  const [activeDemo, setActiveDemo] = useState(COUNT_DEMO)
 
-  useEffect(() => {
-    const timer = setInterval(
-      () => setSecondsOpen((prevSecondsOpen) => prevSecondsOpen + 1),
-      1000,
-    )
-    return () => clearTimeout(timer)
-  }, [])
-
-  const handleCountReset = (event) => {
-    if (
-      event.code === 'Enter' &&
-      event.target.value.toLowerCase() === 'reset'
-    ) {
-      setClicksCount(0)
-      setSecondsOpen(0)
-    }
+  const handleDemoClick = (event) => {
+    setActiveDemo(event.target.value)
   }
+
+  const DemoComponent = getDemoComponent(activeDemo)
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="React logo" />
-        <h1>Hello Parcel + React!</h1>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          Page has been open for <code>{secondsOpen}</code> seconds.
-        </p>
-        <p>
-          <button
-            type="button"
-            onClick={() => setClicksCount((count) => count + 1)}
-          >
-            Count is: {clicksCount}
+      <div className="App-header">
+        <div>
+          <button type="button" onClick={handleDemoClick} value={COUNT_DEMO}>
+            Count demo
           </button>
-        </p>
-
-        <p>
-          <label>
-            Write &quot;reset&quot; and hit enter to reset all the counts:
-            <br />
-            <input
-              type="text"
-              placeholder='Type "reset" here'
-              onKeyDown={handleCountReset}
-            />
-          </label>
-        </p>
-
-        <p>
-          <a
-            className="App-link"
-            href="https://beta.reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://parceljs.org/docs/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Parcel Docs
-          </a>
-        </p>
-      </header>
+          <button type="button" onClick={handleDemoClick} value={POKEMON_DEMO}>
+            Pokémon demo
+          </button>
+          <button type="button" onClick={handleDemoClick} value={WEATHER_DEMO}>
+            Weather demo
+          </button>
+        </div>
+        <hr style={{ width: '100%' }} />
+        {<DemoComponent />}
+      </div>
     </div>
   )
 }
