@@ -6,15 +6,15 @@ import PokemonDemo from '../demos/PokemonDemo'
 import WeatherDemo from '../demos/WeatherDemo'
 import { bulbasaur, madridWeather } from './fixtures'
 
-beforeAll(() => {
-  jest.useFakeTimers()
-})
-
-afterAll(() => {
-  jest.useRealTimers()
-})
-
 describe('Count demo', () => {
+  beforeAll(() => {
+    jest.useFakeTimers()
+  })
+
+  afterAll(() => {
+    jest.useRealTimers()
+  })
+
   it('should count the number of clicks', () => {
     render(<CountDemo />)
 
