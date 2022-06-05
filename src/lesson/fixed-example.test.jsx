@@ -1,5 +1,5 @@
 import React from 'react'
-import { act, render, screen } from '@testing-library/react'
+import { act, render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import CountDemo from '../demos/CountDemo'
 import PokemonDemo from '../demos/PokemonDemo'
@@ -74,6 +74,7 @@ describe('Weather demo', () => {
   it('should display Madrid weather', async () => {
     render(<WeatherDemo />)
 
-    expect(await screen.findByText('Temperature: 28.1ºC')).toBeInTheDocument()
+    await waitFor(() => expect(fetchMock).toHaveBeenCalledTimes(1))
+    expect(screen.getByText('Temperature: 28.1ºC')).toBeInTheDocument()
   })
 })
