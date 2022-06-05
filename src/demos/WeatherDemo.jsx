@@ -28,16 +28,23 @@ const getWeatherCodeReadable = (weatherCode) => {
   )
 }
 
-const WeatherDemo = () => {
+const WeatherDemo = ({ shouldAwaitAdditionalPromise = false }) => {
   const [madridWeather, setMadridWeather] = useState(undefined)
 
   useEffect(() => {
     const initMadridWeather = async () => {
+      // this is an optionally awaited promise to require an extra tick of the event loop
+      if (shouldAwaitAdditionalPromise) {
+        await new Promise((resolve) => setTimeout(resolve, 0))
+      }
+
       const weather = await retrieveMadridWeather()
       setMadridWeather(weather)
     }
 
     initMadridWeather()
+
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

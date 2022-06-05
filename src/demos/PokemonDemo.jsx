@@ -15,13 +15,19 @@ const retrievePokemon = async (id) => {
   return null
 }
 
-export const PokemonDemo = () => {
+export const PokemonDemo = ({ shouldAwaitAdditionalPromise = false }) => {
   const [pokemon, setPokemon] = useState(undefined)
 
   const handlePokemonSearch = async (event) => {
     event.preventDefault()
     const form = event.target
     const formData = new FormData(form)
+
+    // this is an optionally awaited promise to require an extra tick of the event loop
+    if (shouldAwaitAdditionalPromise) {
+      await new Promise((resolve) => setTimeout(resolve, 0))
+    }
+
     const data = await retrievePokemon(formData.get('pokemonId'))
     setPokemon(data)
   }
