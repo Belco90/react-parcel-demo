@@ -15,6 +15,17 @@ afterAll(() => {
 })
 
 describe('Count demo', () => {
+  it('should count the number of clicks', () => {
+    render(<CountDemo />)
+
+    const countButton = screen.getByRole('button')
+    expect(countButton).toHaveTextContent('Count is: 0')
+
+    userEvent.click(countButton)
+
+    expect(countButton).toHaveTextContent('Count is: 1')
+  })
+
   it('should count how long the page was open', () => {
     render(<CountDemo />)
 
