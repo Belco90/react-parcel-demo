@@ -30,9 +30,7 @@ const CountDemo = () => {
       <p>
         Edit <code>App.jsx</code> and save to test HMR updates.
       </p>
-      <p>
-        Page has been open for <code>{secondsOpen}</code> seconds.
-      </p>
+      <p>Page has been open for {secondsOpen} seconds.</p>
       <p>
         <button
           type="button"
