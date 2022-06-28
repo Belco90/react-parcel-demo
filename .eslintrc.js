@@ -16,7 +16,10 @@ module.exports = {
     {
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
-      rules: {},
+      rules: {
+        // Disable these rules, so we can focus on render-result-naming-convention
+        'testing-library/prefer-screen-queries': 'off',
+      },
     },
   ],
   parserOptions: {
