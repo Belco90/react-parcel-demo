@@ -28,7 +28,7 @@ export const App = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="React logo" />
-        <h1>Hello Parcel + React!</h1>
+        <h1 data-testid="MainHeading">Hello Parcel + React!</h1>
         <p>
           Edit <code>App.jsx</code> and save to test HMR updates.
         </p>
@@ -39,6 +39,7 @@ export const App = () => {
           <button
             type="button"
             onClick={() => setClicksCount((count) => count + 1)}
+            data-testid="CountButton"
           >
             Count is: {clicksCount}
           </button>
@@ -52,6 +53,7 @@ export const App = () => {
               type="text"
               placeholder='Type "reset" here'
               onKeyDown={handleCountReset}
+              data-testid="App-reset-input"
             />
           </label>
         </p>

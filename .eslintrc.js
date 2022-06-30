@@ -31,5 +31,10 @@ module.exports = {
       version: 'detect',
     },
   },
-  rules: {},
+  rules: {
+    'testing-library/consistent-data-testid': [
+      'error',
+      { testIdPattern: '^{fileName}(__([a-z-]+)+)*$' },
+    ],
+  },
 }
